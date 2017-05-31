@@ -1,0 +1,10 @@
+$testvar: 24rem;
+* {
+  box-sizing: border-box;
+  font-size: $testvar;
+}
+
+.foo {
+  display:grid;
+  
+}
