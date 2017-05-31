@@ -3,22 +3,25 @@
 var assemble = require('assemble');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var extname = require('gulp-extname')
 var app = assemble();
 
-app.task('init',function( cb ){
-  app.pages('templates/*.hbs');
-  app.create('layouts',{viewType: 'layout'});
-  app.create('partials',{viewType: 'partial'});
-  app.layouts('./layouts/*.hbs');
-  app.partials('./partials/**/*.hbs');
 
+
+app.task('init',function( cb ){
+  // pages, layouts, and partials ship with assemble so I only need to point them at the right files
+  // using .create() is what was making it not work :s
+  app.pages('*.hbs',{cwd: 'templates'});
+  app.layouts('*.hbs', {cwd: 'layouts'});
+  app.partials('**/*.hbs', {cwd: 'partials'});
   cb();
 });
 
 app.task('assemble',function(){
   return app.toStream('pages')
     .pipe(app.renderFile())
-    .pipe(app.dest('dist'));
+    .pipe(extname())
+    .pipe(app.dest('dist/'));
 });
 
 // The sass task autoprefixes the resulting CSS before writing it.
