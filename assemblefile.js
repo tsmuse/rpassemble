@@ -4,6 +4,7 @@ var assemble = require('assemble');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var extname = require('gulp-extname')
+var helpers = require('handlebars-helpers')();
 var app = assemble();
 
 
@@ -14,6 +15,7 @@ app.task('init',function( cb ){
   app.pages('*.hbs',{cwd: 'templates'});
   app.layouts('*.hbs', {cwd: 'layouts'});
   app.partials('**/*.hbs', {cwd: 'partials'});
+  app.helpers(helpers);
   cb();
 });
 
