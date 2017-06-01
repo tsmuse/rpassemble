@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var extname = require('gulp-extname')
 var helpers = require('handlebars-helpers')();
+var yml = require('js-yaml');
 var app = assemble();
 
 
@@ -15,6 +16,12 @@ app.task('init',function( cb ){
   app.pages('*.hbs',{cwd: 'templates'});
   app.layouts('*.hbs', {cwd: 'layouts'});
   app.partials('**/*.hbs', {cwd: 'partials'});
+  // load all the yml or json files in the data folder as data, namespaced w/ their filename
+  app.dataLoader('yml', function(str, fp){
+    return yml.safeLoad(str);
+  });
+  app.data(['**/*.yml','**/*.json'], {cwd:'data', namespace: true});
+  console.log(app.cache.data);
   app.helpers(helpers);
   cb();
 });

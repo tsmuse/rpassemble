@@ -6,3 +6,9 @@ title: test building
 <h2>foo?</h2>
 {{> test-partial title='I am the best title'}}
 {{> test-helpers test='a'}}
+
+<ul>
+{{#each site.testmenu}}
+  <li>{{this}}</li>
+{{/each}}
+</ul>
