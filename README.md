@@ -20,11 +20,11 @@ Right now the application requires you to install Node.JS first.
 
 Once you have node installed, put this repo's contents into whatever folder you want and then install all the dependencies with
 
-  npm install
+  `npm install`
 
 After all the dependencies are installed you simply run the application with
 
-  assemble
+  `assemble`
 
 The script will run in watch mode and auto-reload your default browser via BrowserSync.
 
