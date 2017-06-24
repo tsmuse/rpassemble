@@ -1,10 +1,9 @@
-$testvar: 24rem;
+$testvar: 16px;
 * {
   box-sizing: border-box;
   font-size: $testvar;
 }
 
-.foo {
-  display:grid;
-  
+h3{
+  color:lightblue;
 }
