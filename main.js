@@ -77,6 +77,17 @@ if (process.platform === 'darwin'){
   })
 }
 
+//open file dialog
+const ipc = require('electron').ipcMain
+const dialog = require('electron').dialog
+
+ipc.on('open-file-dialog-sheet', function(event){
+  const window = BrowserWindow.fromWebContents(event.sender)
+  const files = dialog.showOpenDialog(window, {properties: ['openDirectory',]}, function (files){
+    if (files) event.sender.send('selected-directory', files)
+  })
+})
+
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
@@ -89,7 +100,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
