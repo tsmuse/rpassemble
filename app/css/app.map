@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../sass/app.css",
+	"sources": [
+		"../sass/app.scss"
+	],
+	"sourcesContent": [
+		"@font-face {\n  font-family: \"Ubuntu\";\n  font-style: normal;\n  font-weight: 400;\n  src: url(\"../ubuntu/Ubuntu-Regular.ttf\")\n}\n@font-face {\n  font-family: \"Ubuntu\";\n  font-style: normal;\n  font-weight: 700;\n  src: url(\"../ubuntu/Ubuntu-Bold.ttf\")\n}\n@font-face {\n  font-family: \"Ubuntu\";\n  font-style: normal;\n  font-weight: 200;\n  src: url(\"../ubuntu/Ubuntu-Light.ttf\")\n}\n\n@font-face {\n  font-family: \"Source Sans Pro\";\n  font-style: normal;\n  font-weight: 400;\n  src: url(\"../sourcesanspro/SourceSansPro-Regular.ttf\")\n}\n@font-face {\n  font-family: \"Source Sans Pro\";\n  font-style: normal;\n  font-weight: 600;\n  src: url(\"../sourcesanspro/SourceSansPro-Semibold.ttf\")\n}\n@font-face {\n  font-family: \"Source Sans Pro\";\n  font-style: normal;\n  font-weight: 200;\n  src: url(\"../sourcesanspro/SourceSansPro-Light.ttf\")\n}\n\n* {\n  box-sizing: border-box;\n}\n\nbody{\n  font-family: \"Source Sans Pro\";\n  font-size: 16px;\n}\n\nh1 {\n  font-family: \"Ubuntu\";\n}\n"
+	],
+	"mappings": "AAAA,UAAU;EACR,WAAW,EAAE,QAAS;EACtB,UAAU,EAAE,MAAO;EACnB,WAAW,EAAE,GAAI;EACjB,GAAG,EAAE,mCAAG;;;AAEV,UAAU;EACR,WAAW,EAAE,QAAS;EACtB,UAAU,EAAE,MAAO;EACnB,WAAW,EAAE,GAAI;EACjB,GAAG,EAAE,gCAAG;;;AAEV,UAAU;EACR,WAAW,EAAE,QAAS;EACtB,UAAU,EAAE,MAAO;EACnB,WAAW,EAAE,GAAI;EACjB,GAAG,EAAE,iCAAG;;;AAGV,UAAU;EACR,WAAW,EAAE,iBAAkB;EAC/B,UAAU,EAAE,MAAO;EACnB,WAAW,EAAE,GAAI;EACjB,GAAG,EAAE,iDAAG;;;AAEV,UAAU;EACR,WAAW,EAAE,iBAAkB;EAC/B,UAAU,EAAE,MAAO;EACnB,WAAW,EAAE,GAAI;EACjB,GAAG,EAAE,kDAAG;;;AAEV,UAAU;EACR,WAAW,EAAE,iBAAkB;EAC/B,UAAU,EAAE,MAAO;EACnB,WAAW,EAAE,GAAI;EACjB,GAAG,EAAE,+CAAG;;;;AAGV,AAAA,CAAC,CAAC;EACA,UAAU,EAAE,UAAW;CACxB;;;AAED,AAAA,IAAI,CAAA;EACF,WAAW,EAAE,iBAAkB;EAC/B,SAAS,EAAE,IAAK;CACjB;;;AAED,AAAA,EAAE,CAAC;EACD,WAAW,EAAE,QAAS;CACvB",
+	"names": []
+}

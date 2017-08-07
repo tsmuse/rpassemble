@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../ubuntu/Ubuntu-Regular.ttf")
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../ubuntu/Ubuntu-Bold.ttf")
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../ubuntu/Ubuntu-Light.ttf")
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../sourcesanspro/SourceSansPro-Regular.ttf")
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../sourcesanspro/SourceSansPro-Semibold.ttf")
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../sourcesanspro/SourceSansPro-Light.ttf")
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Source Sans Pro";
+  font-size: 16px;
+}
+
+h1 {
+  font-family: "Ubuntu";
+}
