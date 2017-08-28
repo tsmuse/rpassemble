@@ -1,50 +1,123 @@
+@import "../../node_modules/normalize.css/normalize.css";
+//== Typeface definitions
+
 @font-face {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
-  src: url("../ubuntu/Ubuntu-Regular.ttf")
+  src: url("../fonts/ubuntu/Ubuntu-Regular.ttf")
 }
 @font-face {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 700;
-  src: url("../ubuntu/Ubuntu-Bold.ttf")
+  src: url("../fonts/ubuntu/Ubuntu-Bold.ttf")
 }
 @font-face {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 200;
-  src: url("../ubuntu/Ubuntu-Light.ttf")
+  src: url("../fonts/ubuntu/Ubuntu-Light.ttf")
 }
 
 @font-face {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
-  src: url("../sourcesanspro/SourceSansPro-Regular.ttf")
+  src: url("../fonts/sourcesanspro/SourceSansPro-Regular.ttf")
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 600;
-  src: url("../sourcesanspro/SourceSansPro-Semibold.ttf")
+  src: url("../fonts/sourcesanspro/SourceSansPro-Semibold.ttf")
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 200;
-  src: url("../sourcesanspro/SourceSansPro-Light.ttf")
+  src: url("../fonts/sourcesanspro/SourceSansPro-Light.ttf")
 }
+
+//== Variables
+//=== Typefaces
+$body_face: "Source Sans Pro";
+$title_face: "Ubuntu";
+
+//=== Colours
+$pale_violet: #5C4B51;
+$light_teal: #8CBEB2;
+$cream: #F2EBBF;
+$gold: #F3B562;
+$red: #F06060;
+
+//== Standard document setup
 
 * {
   box-sizing: border-box;
 }
 
 body{
-  font-family: "Source Sans Pro";
+  font-family: $body_face;
   font-size: 16px;
+  color: darken($light_teal, 55%)
 }
 
 h1 {
-  font-family: "Ubuntu";
+  font-family: $title_face;
+  margin: 0;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  color: darken($light_teal, 40%);
+}
+
+//== layout
+.wrapper{
+  display: grid;
+  width: 100%;
+  max-width: 1200px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: maxcontent;
+}
+
+header {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+section.projects_pane {
+  grid-column: 1 / 1;
+  grid-row: 2 / 2;
+  min-height: 522px;
+}
+
+section.settings_pane {
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
+  min-height:522px;
+}
+
+//== decoration
+
+.menu_bar {
+  background-color: $light_teal;
+  padding: 0.5rem 1rem;
+}
+.app-title {
+  color: darken($light_teal, 30%);
+}
+.projects_pane {
+  background-color: darken($light_teal, 55%);
+}
+.settings_pane {
+  background-color: lighten($light_teal, 20%);
+  padding: 1rem;
+}
+
+.settings_section {
+  padding: 2rem 0.75rem;
+  // border-top: 1px solid darken($light_teal, 45%);
+  // border-bottom: 4px solid darken($light_teal, 45%);
 }

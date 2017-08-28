@@ -1,59 +1,124 @@
+@import url(../../node_modules/normalize.css/normalize.css);
 @font-face {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
-  src: url("../ubuntu/Ubuntu-Regular.ttf");
+  src: url("../fonts/ubuntu/Ubuntu-Regular.ttf");
 }
 
 @font-face {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 700;
-  src: url("../ubuntu/Ubuntu-Bold.ttf");
+  src: url("../fonts/ubuntu/Ubuntu-Bold.ttf");
 }
 
 @font-face {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 200;
-  src: url("../ubuntu/Ubuntu-Light.ttf");
+  src: url("../fonts/ubuntu/Ubuntu-Light.ttf");
 }
 
 @font-face {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
-  src: url("../sourcesanspro/SourceSansPro-Regular.ttf");
+  src: url("../fonts/sourcesanspro/SourceSansPro-Regular.ttf");
 }
 
 @font-face {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 600;
-  src: url("../sourcesanspro/SourceSansPro-Semibold.ttf");
+  src: url("../fonts/sourcesanspro/SourceSansPro-Semibold.ttf");
 }
 
 @font-face {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 200;
-  src: url("../sourcesanspro/SourceSansPro-Light.ttf");
+  src: url("../fonts/sourcesanspro/SourceSansPro-Light.ttf");
 }
 
-/* line 39, /Users/ts/Sites/rpassemble/app/sass/app.scss */
+/* line 56, /Users/ts/Sites/rpassemble/app/sass/app.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 43, /Users/ts/Sites/rpassemble/app/sass/app.scss */
+/* line 60, /Users/ts/Sites/rpassemble/app/sass/app.scss */
 body {
   font-family: "Source Sans Pro";
   font-size: 16px;
+  color: #12201c;
 }
 
-/* line 48, /Users/ts/Sites/rpassemble/app/sass/app.scss */
+/* line 66, /Users/ts/Sites/rpassemble/app/sass/app.scss */
 h1 {
   font-family: "Ubuntu";
+  margin: 0;
+}
+
+/* line 71, /Users/ts/Sites/rpassemble/app/sass/app.scss */
+h2 {
+  margin: 0 0 1rem;
+  color: #2e5148;
+}
+
+/* line 77, /Users/ts/Sites/rpassemble/app/sass/app.scss */
+.wrapper {
+  display: grid;
+  width: 100%;
+  max-width: 1200px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: maxcontent;
+}
+
+/* line 85, /Users/ts/Sites/rpassemble/app/sass/app.scss */
+header {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+/* line 90, /Users/ts/Sites/rpassemble/app/sass/app.scss */
+section.projects_pane {
+  grid-column: 1 / 1;
+  grid-row: 2 / 2;
+  min-height: 522px;
+}
+
+/* line 96, /Users/ts/Sites/rpassemble/app/sass/app.scss */
+section.settings_pane {
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
+  min-height: 522px;
+}
+
+/* line 104, /Users/ts/Sites/rpassemble/app/sass/app.scss */
+.menu_bar {
+  background-color: #8CBEB2;
+  padding: 0.5rem 1rem;
+}
+
+/* line 108, /Users/ts/Sites/rpassemble/app/sass/app.scss */
+.app-title {
+  color: #407165;
+}
+
+/* line 111, /Users/ts/Sites/rpassemble/app/sass/app.scss */
+.projects_pane {
+  background-color: #12201c;
+}
+
+/* line 114, /Users/ts/Sites/rpassemble/app/sass/app.scss */
+.settings_pane {
+  background-color: #cde3de;
+  padding: 1rem;
+}
+
+/* line 119, /Users/ts/Sites/rpassemble/app/sass/app.scss */
+.settings_section {
+  padding: 2rem 0.75rem;
 }
 
 /*# sourceMappingURL=../css/app.map */
